@@ -1,8 +1,10 @@
 module Main where
 
-import qualified MyLib (someFunc)
+import Instruction
 
 main :: IO ()
 main = do
-  putStrLn "Hello, Haskell!"
-  MyLib.someFunc
+  input <- getContents
+  let instrs = parse (1, 1) input
+  putStrLn "Instructions:"
+  putStrLn $ show instrs
