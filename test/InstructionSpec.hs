@@ -1,8 +1,7 @@
 module InstructionSpec where
 
-import Test.Hspec
-
 import Instruction
+import Test.Hspec
 
 instructionSpec = do
   describe "parse" $ do
